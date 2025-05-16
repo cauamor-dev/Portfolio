@@ -1,14 +1,3 @@
-// Inicializa AOS após o carregamento da página
-window.addEventListener('load', function() {
-  AOS.init({
-    duration: 800,
-    easing: 'ease-in-out',
-    once: true,
-    mirror: false,
-    disable: 'mobile' // Desativa em dispositivos móveis se necessário
-  });
-});
-
 window.onload = function() {
   const canvas = document.getElementById('space-bg');
   if (!canvas) {

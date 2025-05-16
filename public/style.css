@@ -225,3 +225,14 @@ body:not(.preloader-active) main, body:not(.preloader-active) nav, body:not(.pre
 .preloader-glow {
   text-shadow: 0 0 16px #a78bfa, 0 0 32px #7c3aed;
 }
+
+/* Garante que os elementos sejam visíveis antes da animação */
+[data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Ajusta a opacidade inicial dos elementos */
+[data-aos].aos-animate {
+  opacity: 1 !important;
+}

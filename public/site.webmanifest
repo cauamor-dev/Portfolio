@@ -1,0 +1,24 @@
+{
+  "name": "Cauã Moreira Martins | Portfólio",
+  "short_name": "Portfólio Cauã",
+  "icons": [
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#1a0025",
+  "background_color": "#1a0025",
+  "display": "standalone"
+}

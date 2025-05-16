@@ -1,0 +1,206 @@
+body {
+  background: linear-gradient(120deg, #1a0033 0%, #0d0d2b 100%);
+  min-height: 100vh;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+header, footer {
+  background: #12002b;
+}
+
+.card.bg-dark {
+  background: rgba(30, 0, 60, 0.95) !important;
+  border: none;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.btn-primary, .btn-outline-light {
+  border-radius: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px 0 rgba(111,66,193,0.15);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary:hover, .btn-outline-light:hover, .filter-btn.active {
+  background: #a259ff !important;
+  color: #fff !important;
+  box-shadow: 0 4px 16px 0 rgba(162,89,255,0.15);
+}
+
+.filter-btn.active {
+  border: 2px solid #a259ff;
+}
+
+#task-input {
+  background: #1a0033;
+  color: #fff;
+  border: 1px solid #6f42c1;
+  border-radius: 2rem;
+}
+
+#task-input:focus {
+  border-color: #a259ff;
+  box-shadow: 0 0 0 0.2rem rgba(162,89,255,.25);
+}
+
+.list-group-item {
+  background: rgba(30, 0, 60, 0.7);
+  color: #fff;
+  border: 1px solid #6f42c1;
+  margin-bottom: 0.5rem;
+  border-radius: 1rem;
+  transition: background 0.2s, color 0.2s, text-decoration 0.2s;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+}
+
+.list-group-item.completed {
+  background: rgba(60, 0, 90, 0.5);
+  color: #a259ff;
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.list-group-item .btn {
+  border-radius: 1.5rem;
+}
+
+.list-group-item .btn-outline-light {
+  border: 1px solid #a259ff;
+  color: #a259ff;
+  background: transparent;
+}
+
+.list-group-item .btn-outline-light:hover {
+  background: #a259ff;
+  color: #fff;
+}
+
+/* Animação suave ao adicionar/remover */
+.list-group-item {
+  animation: fadeIn 0.4s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Efeito de estrelas no fundo */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: url('https://svgshare.com/i/12vG.svg') repeat;
+  opacity: 0.15;
+}
+
+main, .card, header, footer {
+  position: relative;
+  z-index: 1;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+header .navbar {
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  box-shadow: 0 4px 24px 0 rgba(111,66,193,0.10);
+}
+
+footer {
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  box-shadow: 0 -4px 24px 0 rgba(111,66,193,0.10);
+  background: #12002b;
+  flex-shrink: 0;
+  width: 100%;
+  position: sticky;
+  bottom: 0;
+}
+
+footer a {
+  transition: color 0.2s, transform 0.2s;
+}
+
+footer a:hover {
+  color: #a259ff !important;
+  transform: translateY(-2px) scale(1.15);
+}
+
+footer .bi-heart-fill {
+  vertical-align: -0.1em;
+}
+
+.navbar-brand .bi-moon-stars-fill {
+  filter: drop-shadow(0 0 6px #a259ff88);
+}
+
+/* Cabeçalho SpaceTasks */
+.st-header {
+  background: linear-gradient(90deg, #1a0033 0%, #6f42c1 100%);
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  box-shadow: 0 4px 24px 0 rgba(111,66,193,0.10);
+  color: #fff;
+}
+.st-logo {
+  font-size: 2.5rem;
+  color: #a259ff;
+  filter: drop-shadow(0 0 12px #a259ff88);
+}
+.st-title {
+  font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #fff;
+  text-shadow: 0 2px 8px #6f42c188;
+}
+.st-slogan {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #fff;
+  text-shadow: 0 2px 8px #a259ff88;
+  background: rgba(0,0,0,0.15);
+  border-radius: 1rem;
+  padding: 0.3rem 1.2rem;
+}
+
+/* Footer SpaceTasks */
+.st-footer {
+  background: linear-gradient(90deg, #0d0d2b 0%, #1a0033 60%, #6f42c1 100%);
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  box-shadow: 0 -4px 24px 0 rgba(111,66,193,0.10);
+  color: #fff;
+}
+.st-footer-icon {
+  display: inline-block;
+  margin: 0 0.5rem;
+  font-size: 2rem;
+  color: #a259ff;
+  filter: drop-shadow(0 0 8px #a259ff88);
+  transition: color 0.2s, filter 0.2s, transform 0.2s;
+}
+.st-footer-icon:hover {
+  color: #fff;
+  filter: drop-shadow(0 0 16px #fff);
+  transform: scale(1.15) rotate(-8deg);
+}
+.st-footer-text {
+  color: #fff;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  text-shadow: 0 2px 8px #6f42c144;
+} 
